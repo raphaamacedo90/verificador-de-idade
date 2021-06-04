@@ -23,6 +23,7 @@ function verificar(){
 
         if(sexo[0].checked){
             genero = "Homem"
+            result.innerHTML = `Detectamos um ${genero} e tem ${idade} anos.`
             if(idade >= 0 && idade < 12){
                 //criança
                 img.setAttribute("src", "bebem.png")
@@ -44,6 +45,7 @@ function verificar(){
 
         }else if(sexo[1].checked){
             genero = "Mulher"
+            result.innerHTML = `Detectamos uma ${genero} e tem ${idade} anos.`
             if(idade >= 0 && idade < 12){
                 //criança
                 img.setAttribute("src", "bebef.png")
@@ -62,8 +64,8 @@ function verificar(){
 
             }
         }
-        result.style.textAlign = "center"
-        result.innerHTML = `Detectamos um ${genero} e tem ${idade} anos.`
+        
+        result.style.textAlign = "center"       
         result.appendChild(img)
         
         
